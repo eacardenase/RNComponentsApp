@@ -1421,6 +1421,7 @@ PODS:
     - ReactCommon/turbomodule/core
     - ReactNativeDependencies
     - Yoga
+  - react-native-vector-icons-ionicons (14.0.0)
   - React-NativeModulesApple (0.88.1):
     - hermes-engine
     - React-bridging
@@ -1963,6 +1964,7 @@ DEPENDENCIES:
   - React-microtasksnativemodule (from `../node_modules/react-native/ReactCommon/react/nativemodule/microtasks`)
   - React-mutationobservernativemodule (from `../node_modules/react-native/ReactCommon/react/nativemodule/mutationobserver`)
   - react-native-safe-area-context (from `../node_modules/react-native-safe-area-context`)
+  - "react-native-vector-icons-ionicons (from `../node_modules/@react-native-vector-icons/ionicons`)"
   - React-NativeModulesApple (from `../node_modules/react-native/ReactCommon/react/nativemodule/core/platform/ios`)
   - React-networking (from `../node_modules/react-native/ReactCommon/react/networking`)
   - React-oscompat (from `../node_modules/react-native/ReactCommon/oscompat`)
@@ -2104,6 +2106,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/react/nativemodule/mutationobserver"
   react-native-safe-area-context:
     :path: "../node_modules/react-native-safe-area-context"
+  react-native-vector-icons-ionicons:
+    :path: "../node_modules/@react-native-vector-icons/ionicons"
   React-NativeModulesApple:
     :path: "../node_modules/react-native/ReactCommon/react/nativemodule/core/platform/ios"
   React-networking:
@@ -2238,6 +2242,7 @@ SPEC CHECKSUMS:
   React-microtasksnativemodule: 6c601251d281bad8babd1cdbf8ed87e7300da711
   React-mutationobservernativemodule: f2011b103c51b040b871f9b6cdc1cd1ac4984ce4
   react-native-safe-area-context: 65f6b2269c248bb566e010a8a69ac3dd42f1f8f3
+  react-native-vector-icons-ionicons: 5eb068ae5d46f771670147bf2bd08a09d9ad308a
   React-NativeModulesApple: 928f694d81d073721cbad4edab22cf0319a02607
   React-networking: f052224066cdfbe8b79aa493d6186307e344a7e9
   React-oscompat: 8e61df6f0df6b1b1116e130707328973c84fefb3
