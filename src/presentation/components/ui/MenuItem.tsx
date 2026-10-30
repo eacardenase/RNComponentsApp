@@ -1,6 +1,7 @@
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 import { COLORS } from '../../../config/theme';
 import { IonIcon, IonIconName } from '../shared/IonIcon';
+import { useNavigation } from '@react-navigation/native';
 
 export interface MenuItemProps {
   name: string;
@@ -9,8 +10,10 @@ export interface MenuItemProps {
 }
 
 export const MenuItem = ({ name, icon, component }: MenuItemProps) => {
+  const navigation = useNavigation<any>();
+
   return (
-    <Pressable>
+    <Pressable onPress={() => navigation.navigate(component)}>
       <View style={styles.container}>
         <View style={styles.iconContainer}>
           <IonIcon name={icon} size={25} color={COLORS.primary} />
