@@ -1,5 +1,5 @@
-import { ScrollView, View } from 'react-native';
-import { GLOBAL_STYLES } from '../../../config/theme';
+import { ScrollView, StyleSheet, View } from 'react-native';
+import { COLORS, GLOBAL_STYLES } from '../../../config/theme';
 import { MenuItem, MenuItemProps, Title } from '../../components';
 
 export const menuItems: MenuItemProps[] = [
@@ -70,13 +70,23 @@ export const HomeScreen = () => {
     <View style={GLOBAL_STYLES.mainContainer}>
       <View style={GLOBAL_STYLES.globalMargin}>
         <ScrollView>
-          <Title text="Options" safe />
+          <Title text="Menu Options" safe />
 
-          {menuItems.map(item => (
-            <MenuItem key={item.component} {...item} />
-          ))}
+          <View style={styles.container}>
+            {menuItems.map(item => (
+              <MenuItem key={item.component} {...item} />
+            ))}
+          </View>
         </ScrollView>
       </View>
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    borderRadius: 10,
+    backgroundColor: COLORS.cardBackground,
+    paddingVertical: 10,
+  },
+});

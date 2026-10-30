@@ -6,9 +6,17 @@ export interface MenuItemProps {
   name: string;
   icon: IonIconName;
   component: string;
+  isFirst?: boolean;
+  isLast?: boolean;
 }
 
-export const MenuItem = ({ name, icon, component }: MenuItemProps) => {
+export const MenuItem = ({
+  name,
+  icon,
+  component,
+  isFirst = false,
+  isLast = false,
+}: MenuItemProps) => {
   return (
     <Pressable>
       <View style={styles.container}>
@@ -36,7 +44,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingHorizontal: 10,
     paddingVertical: 5,
-    backgroundColor: COLORS.cardBackground,
   },
   iconContainer: {
     marginRight: 10,
