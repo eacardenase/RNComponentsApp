@@ -1,8 +1,8 @@
-import { ScrollView, Text, View } from 'react-native';
+import { ScrollView, View } from 'react-native';
 import { GLOBAL_STYLES } from '../../../config/theme';
-import { Title } from '../../components';
+import { MenuItem, MenuItemProps, Title } from '../../components';
 
-export const menuItems = [
+export const menuItems: MenuItemProps[] = [
   // 01-animationMenuItems
   {
     name: 'Animation 101',
@@ -73,7 +73,7 @@ export const HomeScreen = () => {
           <Title text="Options" safe />
 
           {menuItems.map(item => (
-            <Text key={item.component}>{item.name}</Text>
+            <MenuItem key={item.component} {...item} />
           ))}
         </ScrollView>
       </View>
