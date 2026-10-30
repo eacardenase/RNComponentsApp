@@ -1,9 +1,8 @@
-import { ScrollView, StyleSheet, View } from 'react-native';
-import { COLORS, GLOBAL_STYLES } from '../../../config/theme';
-import { MenuItem, MenuItemProps, Title } from '../../components';
+import { ScrollView, View } from 'react-native';
+import { GLOBAL_STYLES } from '../../../config/theme';
+import { MenuItemProps, MenuItemSection, Title } from '../../components';
 
-export const menuItems: MenuItemProps[] = [
-  // 01-animationMenuItems
+const animationMenuItems: MenuItemProps[] = [
   {
     name: 'Animation 101',
     icon: 'cube-outline',
@@ -14,8 +13,9 @@ export const menuItems: MenuItemProps[] = [
     icon: 'albums-outline',
     component: 'Animation102Screen',
   },
+];
 
-  // 02-menuItems
+const menuItems: MenuItemProps[] = [
   {
     name: 'Pull to refresh',
     icon: 'refresh-outline',
@@ -46,8 +46,9 @@ export const menuItems: MenuItemProps[] = [
     icon: 'flask-outline',
     component: 'ChangeThemeScreen',
   },
+];
 
-  // 03- uiMenuItems
+const uiMenuItems: MenuItemProps[] = [
   {
     name: 'Switches',
     icon: 'toggle-outline',
@@ -72,21 +73,11 @@ export const HomeScreen = () => {
         <ScrollView>
           <Title text="Menu Options" safe />
 
-          <View style={styles.container}>
-            {menuItems.map(item => (
-              <MenuItem key={item.component} {...item} />
-            ))}
-          </View>
+          <MenuItemSection items={animationMenuItems} />
+          <MenuItemSection items={menuItems} />
+          <MenuItemSection items={uiMenuItems} />
         </ScrollView>
       </View>
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    borderRadius: 10,
-    backgroundColor: COLORS.cardBackground,
-    paddingVertical: 10,
-  },
-});

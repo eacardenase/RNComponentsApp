@@ -6,17 +6,9 @@ export interface MenuItemProps {
   name: string;
   icon: IonIconName;
   component: string;
-  isFirst?: boolean;
-  isLast?: boolean;
 }
 
-export const MenuItem = ({
-  name,
-  icon,
-  component,
-  isFirst = false,
-  isLast = false,
-}: MenuItemProps) => {
+export const MenuItem = ({ name, icon, component }: MenuItemProps) => {
   return (
     <Pressable>
       <View style={styles.container}>
