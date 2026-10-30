@@ -1,15 +1,18 @@
+import { createStaticNavigation } from '@react-navigation/native';
 import {
   createStackNavigator,
   createStackScreen,
 } from '@react-navigation/stack';
 import { HomeScreen } from '../screens';
-import { createStaticNavigation } from '@react-navigation/native';
 
 const StackNavigator = createStackNavigator({
   screens: {
     Home: createStackScreen({
       screen: HomeScreen,
     }),
+  },
+  screenOptions: {
+    headerShown: false,
   },
 });
 
