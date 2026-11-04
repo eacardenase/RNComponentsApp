@@ -18,7 +18,8 @@ export const Animation101Screen = () => {
       toValue: 0,
       duration: 500,
       useNativeDriver: true,
-      easing: Easing.elastic(5),
+      // easing: Easing.elastic(2),
+      easing: Easing.bounce,
     }).start();
 
     Animated.timing(animatedOpacity, {
@@ -33,13 +34,7 @@ export const Animation101Screen = () => {
       toValue: 0,
       duration: 500,
       useNativeDriver: true,
-    }).start();
-
-    Animated.timing(animatedTop, {
-      toValue: -100,
-      duration: 500,
-      useNativeDriver: true,
-    }).start();
+    }).start(() => animatedTop.resetAnimation());
   };
 
   return (
