@@ -3,7 +3,7 @@ import {
   createStackNavigator,
   createStackScreen,
 } from '@react-navigation/stack';
-import { Animation101Screen, HomeScreen } from '../screens';
+import { Animation101Screen, Animation102Screen, HomeScreen } from '../screens';
 
 const StackNavigator = createStackNavigator({
   screens: {
@@ -12,6 +12,9 @@ const StackNavigator = createStackNavigator({
     }),
     Animation101Screen: createStackScreen({
       screen: Animation101Screen,
+    }),
+    Animation102Screen: createStackScreen({
+      screen: Animation102Screen,
     }),
   },
   screenOptions: {
