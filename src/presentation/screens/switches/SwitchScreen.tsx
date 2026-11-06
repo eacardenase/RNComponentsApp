@@ -3,17 +3,31 @@ import { Card, CustomSwitch, CustomView } from '../../components';
 import { useState } from 'react';
 
 export const SwitchScreen = () => {
-  const [isEnabled, setIsEnabled] = useState(false);
-
-  const toggleSwitch = () => setIsEnabled(prevState => !prevState);
+  const [state, setState] = useState({
+    isActive: true,
+    isHungry: false,
+    isHappy: true,
+  });
 
   return (
     <CustomView style={styles.container}>
       <Card>
         <CustomSwitch
-          isOn={isEnabled}
-          text="Encendido"
-          onChange={toggleSwitch}
+          isOn={state.isActive}
+          text="Active"
+          onChange={value => setState({ ...state, isActive: value })}
+        />
+
+        <CustomSwitch
+          isOn={state.isHungry}
+          text="Hungry"
+          onChange={value => setState({ ...state, isHungry: value })}
+        />
+
+        <CustomSwitch
+          isOn={state.isHappy}
+          text="Happy"
+          onChange={value => setState(prev => ({ ...prev, isHappy: value }))}
         />
       </Card>
     </CustomView>
