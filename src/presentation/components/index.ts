@@ -1,4 +1,5 @@
 export * from './shared/IonIcon';
+export * from './ui/Card';
 export * from './ui/CustomView';
 export * from './ui/MenuItem';
 export * from './ui/MenuItemSection';

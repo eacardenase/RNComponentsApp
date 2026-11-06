@@ -1,10 +1,19 @@
-import { Text } from 'react-native';
-import { CustomView } from '../../components';
+import { StyleSheet, Text } from 'react-native';
+import { Card, CustomView } from '../../components';
 
 export const SwitchScreen = () => {
   return (
-    <CustomView>
-      <Text>SwitchScreen</Text>
+    <CustomView style={styles.container}>
+      <Card>
+        <Text>SwitchScreen</Text>
+      </Card>
     </CustomView>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    marginTop: 100,
+    paddingHorizontal: 10,
+  },
+});
