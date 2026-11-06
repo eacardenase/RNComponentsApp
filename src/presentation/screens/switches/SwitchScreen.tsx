@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { Card, CustomSwitch, CustomView } from '../../components';
+import { Card, CustomSwitch, CustomView, Separator } from '../../components';
 import { useState } from 'react';
 
 export const SwitchScreen = () => {
@@ -18,11 +18,15 @@ export const SwitchScreen = () => {
           onChange={value => setState({ ...state, isActive: value })}
         />
 
+        <Separator />
+
         <CustomSwitch
           isOn={state.isHungry}
           text="Hungry"
           onChange={value => setState({ ...state, isHungry: value })}
         />
+
+        <Separator />
 
         <CustomSwitch
           isOn={state.isHappy}

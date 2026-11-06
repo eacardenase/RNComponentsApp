@@ -1,6 +1,7 @@
 import { StyleSheet, View } from 'react-native';
-import { MenuItem, MenuItemProps } from '..';
+import { MenuItem, MenuItemProps, Separator } from '..';
 import { COLORS } from '../../../config/theme';
+import React from 'react';
 
 interface Props {
   items: MenuItemProps[];
@@ -9,8 +10,12 @@ interface Props {
 export const MenuItemSection = ({ items }: Props) => {
   return (
     <View style={styles.container}>
-      {items.map(item => (
-        <MenuItem key={item.component} {...item} />
+      {items.map((item, index) => (
+        <React.Fragment key={item.component}>
+          <MenuItem {...item} />
+
+          {index < items.length - 1 && <Separator />}
+        </React.Fragment>
       ))}
     </View>
   );
