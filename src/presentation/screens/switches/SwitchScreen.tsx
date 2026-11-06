@@ -1,11 +1,20 @@
 import { StyleSheet } from 'react-native';
-import { Button, Card, CustomView } from '../../components';
+import { Card, CustomSwitch, CustomView } from '../../components';
+import { useState } from 'react';
 
 export const SwitchScreen = () => {
+  const [isEnabled, setIsEnabled] = useState(false);
+
+  const toggleSwitch = () => setIsEnabled(prevState => !prevState);
+
   return (
     <CustomView style={styles.container}>
       <Card>
-        <Button text="Click me" />
+        <CustomSwitch
+          isOn={isEnabled}
+          text="Encendido"
+          onChange={toggleSwitch}
+        />
       </Card>
     </CustomView>
   );
