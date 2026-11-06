@@ -1,11 +1,11 @@
-import { StyleSheet, Text } from 'react-native';
-import { Card, CustomView } from '../../components';
+import { StyleSheet } from 'react-native';
+import { Button, Card, CustomView } from '../../components';
 
 export const SwitchScreen = () => {
   return (
     <CustomView style={styles.container}>
       <Card>
-        <Text>SwitchScreen</Text>
+        <Button text="Click me" />
       </Card>
     </CustomView>
   );
