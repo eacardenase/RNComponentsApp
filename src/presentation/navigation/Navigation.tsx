@@ -4,6 +4,7 @@ import {
   createStackScreen,
 } from '@react-navigation/stack';
 import {
+  AlertScreen,
   Animation101Screen,
   Animation102Screen,
   HomeScreen,
@@ -23,6 +24,9 @@ const StackNavigator = createStackNavigator({
     }),
     SwitchScreen: createStackScreen({
       screen: SwitchScreen,
+    }),
+    AlertScreen: createStackScreen({
+      screen: AlertScreen,
     }),
   },
   screenOptions: {
