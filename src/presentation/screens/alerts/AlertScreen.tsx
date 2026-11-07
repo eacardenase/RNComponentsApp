@@ -52,6 +52,16 @@ export const AlertScreen = () => {
     ]);
   };
 
+  const showPrompt = () => {
+    Alert.prompt(
+      'What is your email?',
+      'Incididunt ut aute nisi aute velit in duis et.',
+      (value: string) => {
+        console.log(value);
+      },
+    );
+  };
+
   return (
     <CustomView style={[GLOBAL_STYLES.globalMargin, styles.container]}>
       <Title text="Alerts" safe />
@@ -60,7 +70,7 @@ export const AlertScreen = () => {
 
       <Button text="Alert - 3 Buttons" onPress={createThreeButtonAlert} />
 
-      <Button text="Prompt - Input" />
+      <Button text="Prompt - Input" onPress={showPrompt} />
     </CustomView>
   );
 };
