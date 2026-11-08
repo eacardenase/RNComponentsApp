@@ -1,6 +1,7 @@
 import { Alert, StyleSheet } from 'react-native';
 import { GLOBAL_STYLES } from '../../../config/theme';
 import { Button, CustomView, Title } from '../../components';
+import { showPrompt } from '../../../config/adapters';
 
 export const AlertScreen = () => {
   const createTwoButtonAlert = () => {
@@ -52,14 +53,14 @@ export const AlertScreen = () => {
     ]);
   };
 
-  const showPrompt = () => {
-    Alert.prompt(
-      'What is your email?',
-      'Incididunt ut aute nisi aute velit in duis et.',
-      (value: string) => {
-        console.log(value);
+  const onShowPropmt = () => {
+    showPrompt({
+      title: 'What is your email?',
+      message: 'Incididunt ut aute nisi aute velit in duis et.',
+      callback: (text: string) => {
+        console.log(text);
       },
-    );
+    });
   };
 
   return (
@@ -70,7 +71,7 @@ export const AlertScreen = () => {
 
       <Button text="Alert - 3 Buttons" onPress={createThreeButtonAlert} />
 
-      <Button text="Prompt - Input" onPress={showPrompt} />
+      <Button text="Prompt - Input" onPress={onShowPropmt} />
     </CustomView>
   );
 };
