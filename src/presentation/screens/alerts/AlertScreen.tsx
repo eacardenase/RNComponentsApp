@@ -57,9 +57,17 @@ export const AlertScreen = () => {
     showPrompt({
       title: 'What is your email?',
       message: 'Incididunt ut aute nisi aute velit in duis et.',
-      callback: (text: string) => {
-        console.log(text);
-      },
+      buttons: [
+        {
+          text: 'Cancel',
+          style: 'cancel',
+          onPress: () => {},
+        },
+        {
+          text: 'OK',
+          onPress: () => {},
+        },
+      ],
     });
   };
 
